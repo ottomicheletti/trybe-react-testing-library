@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
-
+import { Link, Route, Switch } from 'react-router-dom';
+import './App.css';
 import {
   About,
   FavoritePokemons,
   NotFound,
   Pokedex,
-  PokemonDetails,
+  PokemonDetails
 } from './components';
-
+import pokemons from './data';
 import {
   readFavoritePokemonIds,
-  updateFavoritePokemons,
+  updateFavoritePokemons
 } from './services/pokedexService';
 
-import pokemons from './data';
 
-import './App.css';
+
+
 
 class App extends Component {
   static setIsPokemonFavoriteById() {
