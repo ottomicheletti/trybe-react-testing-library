@@ -14,10 +14,6 @@ import {
   updateFavoritePokemons
 } from './services/pokedexService';
 
-
-
-
-
 class App extends Component {
   static setIsPokemonFavoriteById() {
     const favoritePokemonIds = readFavoritePokemonIds();
