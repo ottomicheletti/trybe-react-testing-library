@@ -4,7 +4,7 @@ import React from 'react';
 import App from '../App';
 import renderWithRouter from '../helper/renderWithRouter';
 
-describe('Teste o componente <App.js />.', () => {
+describe('Teste o componente <App.js />', () => {
   beforeEach(() => {
     renderWithRouter(<App />);
   });
