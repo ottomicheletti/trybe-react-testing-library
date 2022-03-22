@@ -7,20 +7,22 @@ describe('Teste o componente <About.js />', () => {
   beforeEach(() => {
     renderWithRouter(<About />);
   });
+
   afterEach(() => {
     cleanup();
   });
+
   test('A página contém as informações sobre a Pokédex', () => {
-    const title = screen.getByRole('heading', { level: 2 });
+    const h2 = screen.getByRole('heading', { level: 2 });
     const paragraphs = screen.getAllByText(/pokémons/i);
-    expect(title.textContent).toEqual('About Pokédex');
-    expect(title).toBeInTheDocument();
+    expect(h2.textContent).toEqual('About Pokédex');
+    expect(h2).toBeInTheDocument();
     expect(paragraphs.length).toBe(2);
   });
   test('A página contém um heading h2 com o texto About Pokédex', () => {
-    const title = screen.getByRole('heading', { level: 2 });
-    expect(title.textContent).toEqual('About Pokédex');
-    expect(title).toBeInTheDocument();
+    const h2 = screen.getByRole('heading', { level: 2 });
+    expect(h2.textContent).toEqual('About Pokédex');
+    expect(h2).toBeInTheDocument();
   });
   test('A página contém dois parágrafos com texto sobre a Pokédex', () => {
     const paragraphs = screen.getAllByText(/pokémons/i);

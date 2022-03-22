@@ -9,6 +9,7 @@ describe('Teste o componente <FavoritePokemons.js />', () => {
   afterEach(() => {
     cleanup();
   });
+
   test(`É exibido na tela a mensagem No favorite pokemon found,
 se a pessoa não tiver pokémons favoritos`, () => {
     renderWithRouter(<FavoritePokemons />);
