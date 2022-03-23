@@ -18,8 +18,8 @@ se a pessoa não tiver pokémons favoritos`, () => {
   });
   test('É exibido todos os cards de pokémons favoritados', () => {
     renderWithRouter(<App />);
-    const details = screen.getByText(/more details/i);
-    userEvent.click(details);
+    const pokemonDetailsLink = screen.getByText(/more details/i);
+    userEvent.click(pokemonDetailsLink);
     const favoritePokemon = screen.getByRole('checkbox', { checked: false });
     userEvent.click(favoritePokemon);
     const favorites = screen.getByText(/favorite/i);
